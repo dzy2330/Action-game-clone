@@ -3,6 +3,11 @@
   "resourceVersion": "1.6",
   "name": "Action game clone",
   "resources": [
+    {"id":{"name":"Enemy_manager","path":"objects/Enemy_manager/Enemy_manager.yy",},"order":2,},
+    {"id":{"name":"enemy","path":"objects/enemy/enemy.yy",},"order":1,},
+    {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},"order":1,},
+    {"id":{"name":"Fish","path":"objects/Fish/Fish.yy",},"order":0,},
+    {"id":{"name":"Sprite1","path":"sprites/Sprite1/Sprite1.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
   "Options": [
@@ -20,7 +25,7 @@
     {"name":"Xbox Series XS","path":"options/xboxseriesxs/options_xboxseriesxs.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
   ],
-  "defaultScriptType": 0,
+  "defaultScriptType": 1,
   "isEcma": false,
   "configs": {
     "name": "Default",
