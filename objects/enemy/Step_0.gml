@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+x = clamp(x, 0, 1500 - sprite_width);
+y = clamp(y, 0,750 - sprite_height);
 randomize()
 var distance_to_player = point_distance(x, y, Fish.x, Fish.y);
 var shooting_distance = 100; 

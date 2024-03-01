@@ -19,3 +19,7 @@ enemy1.ishit = true;
     
     instance_destroy(); 
 }
+
+if(instance_place(x, y, Rock)){
+	instance_destroy(self);
+}

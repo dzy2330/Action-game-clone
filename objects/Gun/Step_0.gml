@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+x = clamp(x, 0, 1500 - sprite_width);
+y = clamp(y, 0, 750 - sprite_height);
 var moveUp = keyboard_check(ord("W")); 
 var moveLeft = keyboard_check(ord("A")); // 按A向左
 var moveDown = keyboard_check(ord("S")); // 按S向下
@@ -23,6 +24,9 @@ if (moveLeft) {
 if (moveRight) {
     x+=character_speed;
 }
+
+x = Fish.x+60;
+y=Fish.y+23;
 
 // 获取鼠标位
 

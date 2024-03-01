@@ -3,3 +3,7 @@
 
 direction = angle;
 speed = 4;
+
+if(instance_place(x, y, Rock)){
+	instance_destroy(self);
+}

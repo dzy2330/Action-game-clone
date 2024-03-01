@@ -14,13 +14,18 @@ var influence = 100;
 var cam_target_x = player_x + (mouse_offset_x * influence);
 var cam_target_y = player_y + (mouse_offset_y * influence);
 
-//the code below is to not let the camara out of the room
-//cam_target_x = clamp(cam_target_x, view_width / 2, room_width - view_width / 2);
-//cam_target_y = clamp(cam_target_y, view_height / 2, room_height - view_height / 2);
 
+
+//the code below is to not let the camara out of the room
+cam_target_x = clamp(cam_target_x, view_width / 2, room_width - view_width / 2);
+cam_target_y = clamp(cam_target_y, view_height / 2, room_height - view_height / 2);
+if (keyboard_check_released(ord("R"))) {
+	Fire.visible = false;
+    
+}
 
 camera_set_view_pos(camera, cam_target_x - view_width / 2, cam_target_y - view_height / 2);
-// 假设这段代码在玩家对象的Step事件中
+
 
 // 检测鼠标左键点击
 if (keyboard_check(ord("R"))) {
@@ -34,8 +39,14 @@ muzzle_x =Gun.x + lengthdir_x(gun_length, Gun.image_angle);
 muzzle_y = Gun.y + lengthdir_y(gun_length, Gun.image_angle);
 if (timer >=8){
     var bullet = instance_create_layer(muzzle_x, muzzle_y, "Instances", Bullet7);
-    camera_set_view_pos(camera, camera_get_view_x(camera)+irandom_range(-5,5) , camera_get_view_y(camera) +irandom_range(-5,5));
+    camera_set_view_pos(camera,camera_get_view_x(camera)+irandom_range(-5,5) , camera_get_view_y(camera) +irandom_range(-5,5));
 
+Fire.visible = true;
+
+if (keyboard_check_released(ord("R"))) {
+	Fire.visible = false;
+    
+}
 
     // 设置子弹飞行的基础方向为枪口朝向
     var bullet_direction = Gun.image_angle; // 假设枪和玩家的方向是相同的
