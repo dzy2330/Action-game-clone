@@ -11,7 +11,7 @@ if (distance_to_player <= shooting_distance) {
 
 if(ismove == false){
 move_direction = irandom(359); 
-move_time= random_range(60,140);
+move_time= random_range(40,160);
 ismove = true;
 }
 
@@ -28,8 +28,12 @@ if (ismove == true){
 		}
 	}
 }
-
-
+var shoottime = random_range(350,500);
+timer2 += 1;
+if (timer2 >= shoottime ){
+	instance_create_layer(x, y, "Instances", bullet)
+	timer2 = 0
+}
 //var new_x = x + lengthdir_x(move_distance, move_direction)/600;
 //var new_y = y + lengthdir_y(move_distance, move_direction)/600;
 
