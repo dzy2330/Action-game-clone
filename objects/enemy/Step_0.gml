@@ -16,7 +16,7 @@ ismove = true;
 }
 
 if (ismove == true){
-	show_debug_message("?")
+	
 	direction = move_direction
 	speed = 3;
 	timer += 1;
@@ -31,7 +31,7 @@ if (ismove == true){
 var shoottime = random_range(350,500);
 timer2 += 1;
 if (timer2 >= shoottime ){
-	instance_create_layer(x, y, "Instances", bullet)
+	instance_create_layer(x, y, "Instances", Bullet)
 	timer2 = 0
 }
 //var new_x = x + lengthdir_x(move_distance, move_direction)/600;

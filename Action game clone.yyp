@@ -3,11 +3,12 @@
   "resourceVersion": "1.6",
   "name": "Action game clone",
   "resources": [
+    {"id":{"name":"Bullet7","path":"objects/Bullet7/Bullet7.yy",},"order":7,},
     {"id":{"name":"Enemy_manager","path":"objects/Enemy_manager/Enemy_manager.yy",},"order":1,},
     {"id":{"name":"Sprite23","path":"sprites/Sprite23/Sprite23.yy",},"order":2,},
     {"id":{"name":"enemy","path":"objects/enemy/enemy.yy",},"order":0,},
     {"id":{"name":"Game_manager","path":"objects/Game_manager/Game_manager.yy",},"order":3,},
-    {"id":{"name":"bullet","path":"objects/bullet/bullet.yy",},"order":2,},
+    {"id":{"name":"Bullet","path":"objects/Bullet/Bullet.yy",},"order":2,},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},"order":1,},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},"order":3,},
     {"id":{"name":"Fish","path":"objects/Fish/Fish.yy",},"order":6,},

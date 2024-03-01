@@ -12,6 +12,7 @@ character_speed = 4;
 // 根据按键输入更新角色的位置
 if (moveUp) {
   y-=character_speed;
+  
 }
 if (moveDown) {
    y+=character_speed;

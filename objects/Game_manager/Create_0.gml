@@ -13,3 +13,10 @@ view_camera[0] = camera;
 view_enabled = true;
 view_set_wport(0, view_width);
 view_set_hport(0, view_height);
+
+// 假设这段代码在玩家对象的Step事件中
+// 假设这段代码在玩家对象的Step事件中
+
+// 检测鼠标左键点击
+timer = 0;
+
