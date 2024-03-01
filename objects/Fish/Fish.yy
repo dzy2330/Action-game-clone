@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "Fish",
   "spriteId": {
-    "name": "Sprite23",
-    "path": "sprites/Sprite23/Sprite23.yy",
+    "name": "Man_1",
+    "path": "sprites/Man_1/Man_1.yy",
   },
   "solid": false,
   "visible": true,

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "enemy",
   "spriteId": {
-    "name": "Sprite2",
-    "path": "sprites/Sprite2/Sprite2.yy",
+    "name": "Sprite28",
+    "path": "sprites/Sprite28/Sprite28.yy",
   },
   "solid": false,
   "visible": true,

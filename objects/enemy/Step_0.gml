@@ -15,22 +15,43 @@ move_time= random_range(40,160);
 ismove = true;
 }
 
-if (ismove == true){
-	
+if (ishit = true &&enemyhealth >0){
+sprite_index = Sprite289;
+
+	timer3 +=1;
+
+	if (timer3 >= 20){
+		ishit =false;
+		enemyhealth -=1;
+		timer3 = 0;
+		speed = 0;
+		direction = move_direction
+	}
+}
+
+if (ismove == true&&ishit == false&&enemyhealth >0){
+	sprite_index = Sprite2;
 	direction = move_direction
 	speed = 3;
 	timer += 1;
 	if (timer >= move_time){
 		speed = 0;
+		sprite_index = Sprite28;
 		if (timer >= move_time+45){
 		ismove = false;
 		timer = 0
+	
 		}
 	}
+	
+}
+
+if enemyhealth <= 0{
+	sprite_index = Sprite28910;
 }
 var shoottime = random_range(350,500);
 timer2 += 1;
-if (timer2 >= shoottime ){
+if (timer2 >= shoottime &&enemyhealth >0 ){
 	instance_create_layer(x, y, "Instances", Bullet)
 	timer2 = 0
 }

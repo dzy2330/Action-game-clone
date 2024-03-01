@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+//sequence_plaS e(Squence1);
 
 var moveUp = keyboard_check(ord("W")); 
 var moveLeft = keyboard_check(ord("A")); // 按A向左
@@ -24,3 +25,5 @@ if (moveRight) {
     x+=character_speed;
 }
 
+layer_x(Sequence1, x);
+layer_y(Sequence1, y);
