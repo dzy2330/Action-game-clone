@@ -1,7 +1,7 @@
 // 创建相机
 camera = camera_create();
 
-// 设置相机视图的初始大小（根据你的游戏设计调整）
+
 view_width = 650;
 view_height = 325;
 camera_set_view_size(camera, view_width, view_height);

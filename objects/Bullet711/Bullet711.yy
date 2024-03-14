@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "Bullet7",
+  "name": "Bullet711",
   "spriteId": {
     "name": "Sprite1",
     "path": "sprites/Sprite1/Sprite1.yy",
