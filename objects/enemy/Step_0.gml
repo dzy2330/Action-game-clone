@@ -1,6 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+ var distance_x = Fish.x - x;
+ var distance_y = Fish.y - y;
+    
+    // 反转距离的符号
+    distance_x = -distance_x;
+    distance_y = -distance_y;
+    
+    // 将敌人的位置设置为Fish的位置加上反转后的距离
+    soundlocationx = Fish.x + distance_x;
+    soundlocationy = Fish.y + distance_y;
+	
+	show_debug_message()
+audio_emitter_position(emitter2, soundlocationx, soundlocationy, 0);
+timer3 += 1;
+if (timer3 >=120){
+audio_play_sound_on(emitter2, ta_da_brass_ensemble_fast_soundroll_1_00_01, false, 1);
+timer3 = 0;
+}
+
+
 x = clamp(x, 0, 1500 - sprite_width);
 y = clamp(y, 0,750 - sprite_height);
 randomize()

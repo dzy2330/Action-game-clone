@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+audio_listener_position(x, y, 0);
+
 var moveUp = keyboard_check(ord("W")); 
 var moveLeft = keyboard_check(ord("A")); // 按A向左
 var moveDown = keyboard_check(ord("S")); // 按S向下
