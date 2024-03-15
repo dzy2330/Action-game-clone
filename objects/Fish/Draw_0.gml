@@ -10,14 +10,21 @@ draw_clear_alpha(c_black, 0);
 // 绘制黑色遮罩
 draw_set_color(c_black);
 draw_set_alpha(1);
-draw_rectangle(0, 0, room_width, room_height, false);
+//draw_rectangle(0, 0, room_width, room_height, false);
 
 
 // 在主角对象周围绘制透明区域
 gpu_set_blendmode(bm_subtract);
 draw_set_color(c_black);
 draw_set_alpha(1);
-draw_circle(x-4 , y+28 , 45, false);
+draw_circle(x+11.5 , y+7 , 45, false);
+
+//if (Game_manager.shooting == true&&timer<=10){
+//	draw_circle(Gun.x , Gun.y , 45, false);
+//	timer+=1
+//}else{ timer = 0; 
+//	Game_manager.shooting = false;
+//}
 
 gpu_set_blendmode(bm_normal);
 

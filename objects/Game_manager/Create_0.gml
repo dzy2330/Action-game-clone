@@ -1,6 +1,7 @@
 // 创建相机
 camera = camera_create();
 
+shooting = false;
 
 view_width = 650;
 view_height = 325;

@@ -19,10 +19,10 @@
 //the code below is to not let the camara out of the room
 cam_target_x = clamp(Fish.x, view_width / 2, room_width - view_width / 2);
 cam_target_y = clamp(Fish.y, view_height / 2, room_height - view_height / 2);
-if (keyboard_check_released(ord("R"))) {
-	Fire.visible = false;
+//if (keyboard_check_released(ord("R"))) {
+//	shooting = true
     
-}
+//}
 
 camera_set_view_pos(camera, cam_target_x - view_width / 2, cam_target_y - view_height / 2);
 
@@ -37,16 +37,17 @@ gun_length = 16;
 // 计算枪口的位置
 muzzle_x =Gun.x + lengthdir_x(gun_length, Gun.image_angle);
 muzzle_y = Gun.y + lengthdir_y(gun_length, Gun.image_angle);
-if (timer >=8){
+if (timer >=24){
+	audio_play_sound(fire, 1, false);
     var bullet = instance_create_layer(muzzle_x, muzzle_y, "Instances", Bullet7);
     camera_set_view_pos(camera,camera_get_view_x(camera)+irandom_range(-5,5) , camera_get_view_y(camera) +irandom_range(-5,5));
 
-Fire.visible = true;
+//Fire.visible = true;
 
-if (keyboard_check_released(ord("R"))) {
-	Fire.visible = false;
+//if (keyboard_check_released(ord("R"))) {
+//	Fire.visible = false;
     
-}
+
 
     // 设置子弹飞行的基础方向为枪口朝向
     var bullet_direction = Gun.image_angle; // 假设枪和玩家的方向是相同的
@@ -56,7 +57,8 @@ if (keyboard_check_released(ord("R"))) {
     bullet.direction = bullet_direction + deviation;
 
     // 设置子弹速度
-    bullet.speed = 0.4; // 可根据需要调整
+    bullet.speed = 6; // 可根据需要调整
 	timer = 0;
 }
 }
+

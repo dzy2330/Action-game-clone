@@ -3,5 +3,7 @@
 darkness_surface = -1;
 state = 0;
 moving = false
+movestate = 0;
+playerhealth = 10;
 
 

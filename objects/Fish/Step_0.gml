@@ -11,18 +11,22 @@ var Shift = keyboard_check(vk_shift);
 
 	
 	if (state == 4&&moving = false){
+		movestate = 0;
 	sprite_index = rightstop;
 }
 if (state == 3&&moving = false){
+	movestate = 0;
 	sprite_index = leftstop;
 }
 if (state == 2&&moving = false){
+	movestate = 0;
 	sprite_index = down_stop;
 }
 if (state == 1&&moving = false){
+	movestate = 0;
 	sprite_index = upstop;
 }
-show_debug_message(speed)
+
 moving = false;
 
 character_speed = 0.8;
@@ -37,9 +41,11 @@ if (moveUp) {
 	 moving = true;
         y -= character_speed;
 	state = 1;
+	movestate = 0;
     if (Shift) {
         sprite_index = upfast;
         y -= fast_speed;
+		movestate = 1;
     }
 } 
 //else {
@@ -51,9 +57,11 @@ if (moveDown) {
 	    sprite_index = down_slow;
         y += character_speed;
 	state = 2;
+	movestate = 0;
     if (Shift) {
         sprite_index = downfast;
         y += fast_speed;
+		movestate = 1;
     } 
 } 
 //else {
@@ -64,10 +72,12 @@ if (moveLeft) {
 	moving = true;
 	  sprite_index = left;
         x -= character_speed;
+		movestate = 0;
 	state = 3;
     if (Shift) {
         sprite_index = leftfast;
         x -= fast_speed;
+		movestate = 1;
     } 
 } 
 //else {
@@ -77,11 +87,13 @@ if (moveLeft) {
 if (moveRight) {
 	moving = true;
 	 sprite_index = right;
+	 movestate = 0;
         x += character_speed;
 	 state = 4;
     if (Shift) {
         sprite_index = rightfast;
         x += fast_speed;
+		movestate = 1;
     } 
 }
 //else {
