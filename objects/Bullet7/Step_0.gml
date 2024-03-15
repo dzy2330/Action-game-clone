@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 // 在obj_bullet的代码中检测碰撞
-var enemy1 = instance_place(x, y, Object14); // 检测当前子弹位置是否与敌人碰撞
+var enemy1 = instance_place(x, y, Zombieslow); // 检测当前子弹位置是否与敌人碰撞
 if (enemy1 != noone) { // 如果碰撞到敌人
 
     

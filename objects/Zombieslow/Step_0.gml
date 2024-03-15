@@ -34,7 +34,7 @@ if (instance_exists(Fish)) {
     var zombie_state = ZombieState.Idle;
     
     // 僵尸的移动速度
-    var zombie_speed = 1;
+    var zombie_speed = 0.8;
     
     // 僵尸的感知范围
     var zombie_detection_range_slow = 300;

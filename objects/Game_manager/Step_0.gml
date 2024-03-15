@@ -14,7 +14,11 @@
 //var cam_target_x = player_x + (mouse_offset_x * influence);
 //var cam_target_y = player_y + (mouse_offset_y * influence);
 
-
+timer2 +=1;
+if (timer2>=60)
+{timelast +=1;
+	timer2=0;
+}
 
 //the code below is to not let the camara out of the room
 cam_target_x = clamp(Fish.x, view_width / 2, room_width - view_width / 2);
@@ -28,7 +32,7 @@ camera_set_view_pos(camera, cam_target_x - view_width / 2, cam_target_y - view_h
 
 
 // 检测鼠标左键点击
-if (keyboard_check(ord("R"))) {
+if (keyboard_check(ord("R"))&&Fish.Bulletnumber>0) {
 	
 timer +=1;
 
@@ -39,6 +43,7 @@ muzzle_x =Gun.x + lengthdir_x(gun_length, Gun.image_angle);
 muzzle_y = Gun.y + lengthdir_y(gun_length, Gun.image_angle);
 if (timer >=24){
 	audio_play_sound(fire, 1, false);
+	Fish.Bulletnumber -=1;
     var bullet = instance_create_layer(muzzle_x, muzzle_y, "Instances", Bullet7);
     camera_set_view_pos(camera,camera_get_view_x(camera)+irandom_range(-5,5) , camera_get_view_y(camera) +irandom_range(-5,5));
 

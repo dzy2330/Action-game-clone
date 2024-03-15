@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enemyhealth = 10;
+enemyhealth = 3;
 ishit = false;
 timer = 0;
 timer2 = 800;

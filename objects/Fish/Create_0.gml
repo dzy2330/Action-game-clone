@@ -6,4 +6,8 @@ moving = false
 movestate = 0;
 playerhealth = 10;
 
+Bulletnumber = 70;
+
+
+
 
