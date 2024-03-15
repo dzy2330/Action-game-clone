@@ -9,10 +9,11 @@
     distance_y = -distance_y;
     
     // 将敌人的位置设置为Fish的位置加上反转后的距离
-    soundlocationx = Fish.x + distance_x;
-    soundlocationy = Fish.y + distance_y;
+    soundlocationx = Fish.x - distance_x;
+    soundlocationy = Fish.y - distance_y;
 	
-	show_debug_message()
+
+	
 audio_emitter_position(emitter2, soundlocationx, soundlocationy, 0);
 timer3 += 1;
 if (timer3 >=120){

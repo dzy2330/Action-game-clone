@@ -56,7 +56,7 @@ if (keyboard_check_released(ord("R"))) {
     bullet.direction = bullet_direction + deviation;
 
     // 设置子弹速度
-    bullet.speed = 10; // 可根据需要调整
+    bullet.speed = 0.4; // 可根据需要调整
 	timer = 0;
 }
 }
